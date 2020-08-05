@@ -204,40 +204,40 @@ export class EssentialUserInfo extends Component {
                         this.setState({ ...this.state, show: true });
                       }}
                     />
-                    <p style={{fontSize: "18px", fontFamily: "Lato", paddingTop: "10px", color: "#98b8f6"}}>
+                    <p style={{fontSize: "15px", fontFamily: "Lato", paddingTop: "10px", color: "#98b8f6"}}>
                         Edit
                     </p>
                   </div>
-                  {/* for regular user */}
-                  {
-                    this.props.profile.membership == "Regular" &&
-                    <div className="col">
+                </div>
+                {/* for regular user */}
+                {
+                  this.props.profile.membership == "Regular" &&
+                  <div className="row" style={{float: "right"}}>
+                    <div className="col" style={{display: "flex", alignItems: "center"}}>
                       <IconText
-                        iconName={"card_membership"}  
+                        iconName={"card_membership"}
                         iconMargin={"6px"}
                         textDisplayed={this.props.profile.membership}
                         textSize={"15px"}
                       />
                     </div>
-                  }
-                  {
-                    this.props.profile.membership == "Regular" &&
-                    <div className="upgrade">
-                      {
-                        this.props.profile.membership == "Regular" && 
-                        <Link className="text-15" style={{color: "#ffffff", textDecoration: "none", lineHeight: "34px", marginLeft: "30px"}} to="/pricing">Upgrade</Link>
-                      }
+                    <div className="col upgrade">
+                      <Link className="text-15" style={{color: "#ffffff", textDecoration: "none", lineHeight: "34px"}} to="/pricing">Upgrade</Link>
                     </div>
-                  }
-                  {/* for premium user */}
-                  {
-                    this.props.profile.membership == "Premium" &&
-                    <div className="col" style={{marginBottom: "10px"}}>
+                  </div>
+                }
+                {/* for premium user */}
+                {
+                  this.props.profile.membership == "Premium" &&
+                  <div className="col" style={{marginBottom: "10px"}}>
+                    <div style={{float: "right"}}>
                       <img src={premiumIcon} alt="premiumIcon"/>
-                      <span style={{marginLeft: "6px"}}>Premium</span>
+                      <span style={{marginLeft: "6px", fontSize: "15px", fontWeight: "normal", color: "#7D7D7D"}}>
+                        Premium
+                      </span>
                     </div>
-                  }
-                </div>
+                  </div>
+                }
               </div>
               <div className="row">
                 <div className="col-4">

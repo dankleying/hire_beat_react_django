@@ -73,6 +73,11 @@ export class Dashboard extends Component {
               subpage={this.state.subpage}
             />
           </div>
+          <div style={{
+                width: "0px",
+                height: "619px",
+                border: "1px solid #E5E5E5"}}>
+          </div>
           <div className="col-10">{this.renderSubpage()}</div>
         </DbRow>
       </div>

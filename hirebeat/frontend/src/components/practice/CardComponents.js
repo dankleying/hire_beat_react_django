@@ -47,7 +47,7 @@ export const TestDeviceCard = (props) => {
 };
 
 export const CardRow = (props) => {
-  return <div className="row card-row">{props.children}</div>;
+  return <div className="row card-row" style= {{marginTop: "10px"}}>{props.children}</div>;
 };
 
 export const CardRowHigh = (props) => {

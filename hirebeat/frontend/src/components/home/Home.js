@@ -23,7 +23,6 @@ const HomeButton = (props) => {
       className="btn btn-warning"
       style={{
         WebkitBorderRadius: "30px",
-        marginRight: props.first ? 50 : 0,
         background: props.first ? "#FF6B00" : "transparent",
         border: props.first ? "none" : "2px solid white",
         width: "255px",
@@ -94,10 +93,10 @@ export class Home extends Component {
         }}
       >
         <FadeInSection>
-            <div className="row home-1" style={{marginLeft: "0px"}}>
-              <div className="row">
-                <div className="col" style={{marginLeft: "10%"}}>
-                  <div className="row" style={{marginTop: "15%", marginBottom: "10%"}}>
+            <div className="home-1">
+              <div className="row" style={{marginRight: "0px"}}>
+                <div className="col-4" style={{marginLeft: "10%"}}>
+                  <div style={{marginTop: "15%", marginBottom: "10%", width: "100%"}}>
                     <p style={{fontSize: "50px", fontWeight: "bold", color: "#FFFFFF", textAlign: "center"}}>
                       Land your next job, <br/>
                       starting with the interview
@@ -107,32 +106,33 @@ export class Home extends Component {
                       and makes a great impression at your next interview.
                     </p>
                   </div>
-                  <ScrollAnimation animateIn='wobble' initiallyVisible={true}>
-                    <HomeButton
-                      first={true}
-                      onTap={() => this.redirectTo("/practice/")}
-                      textDisplayed={"Get Started Now"}
-                    />
-                    <HomeButton
-                      first={false}
-                      onTap={() => this.redirectTo("/company/")}
-                      textDisplayed={"Learn More"}
-                    />
-                  </ScrollAnimation>
-
-                </div>
-                <div className="col">
-                  <div className="row" style={{marginTop: "30%"}}>
-                    <img src={pc} alt="pc"/>
+                  <div>
+                    <div style={{display: "inline-block"}}>
+                      <HomeButton
+                        first={true}
+                        onTap={() => this.redirectTo("/practice/")}
+                        textDisplayed={"Get Started Now"}
+                      />
+                    </div>
+                    <div style={{ marginLeft: "15px", display: "inline-block"}}>
+                      <HomeButton
+                        first={false}
+                        onTap={() => this.redirectTo("/company/")}
+                        textDisplayed={"Learn More"}
+                      />
+                    </div>
                   </div>
+                </div>
+                <div className="col" style={{marginLeft: "10%", marginTop: "15%"}}>
+                  <img src={pc} alt="pc"/>
                 </div>
               </div>
            </div>
         </FadeInSection>
         <FadeInSection>
             <div style={{width: "100%"}}>
-              <div style={{marginTop: "5%"}}>
-                <h3 style={{fontSize: "15px", fontWeight: "bold", textAlign: "center", color: "#000000"}}>
+              <div style={{marginTop: "10%"}}>
+                <h3 style={{fontSize: "15px", fontWeight: "bold", textAlign: "center", color: "#000000", marginBottom: "2%"}}>
                   OUR SERVICES
                 </h3>
                 <p style={{fontSize: "30px", fontWeight: "bold", textAlign: "center", color: "#4356F0"}}>
@@ -147,9 +147,9 @@ export class Home extends Component {
               </div>
               <div className="home-2">
                 <br/>
-                <div className="row" style={{marginTop: "7rem"}}>
+                <div className="row" style={{marginTop: "7rem", marginRight: "0px"}}>
                   <div className="col">
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <img src={easyToUse} alt="easy to use icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
@@ -164,7 +164,7 @@ export class Home extends Component {
                     </div>
                   </div>
                   <div className="col">
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <img src={realtime} alt="realtime icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
@@ -178,7 +178,7 @@ export class Home extends Component {
                     </div>
                   </div>
                   <div className="col">
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <img src={questionBank} alt="question bank icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
@@ -193,9 +193,9 @@ export class Home extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="row" style={{marginTop:"1rem"}}>
+                <div className="row" style={{marginTop:"1rem", marginRight: "0px"}}>
                   <div className="col">
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <img src={review} alt="review icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
@@ -209,7 +209,7 @@ export class Home extends Component {
                     </div>
                   </div>
                   <div className="col">
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <img src={afford} alt="affordable icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
@@ -223,7 +223,7 @@ export class Home extends Component {
                     </div>
                   </div>
                   <div className="col">
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <img src={feedback} alt="feedback icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
@@ -256,19 +256,21 @@ export class Home extends Component {
                 Are you overwhelmed with endless questions but nowhere to start <br/>
                 Are you frustrated with few useful feedback but only rejection letter?
               </p>
-              <div className="row home-3" style={{marginLeft: "0px"}}>
-                <div className="col" style={{marginTop: "10%", marginLeft: "5%"}}>
-                  <img src={laptop} alt="laptop image"/>
-                </div>
-                <div className="col">
-                  <div className="row" style={{marginLeft: "70%", marginTop: "30%"}}>
-                    <img src={people} alt="people image"/>
+              <div className="home-3">
+                <div className="row" style={{marginRight: "0px"}}>
+                  <div className="col-4" style={{marginLeft: "5%", marginTop: "10%"}}>
+                    <img src={laptop} alt="laptop image"/>
                   </div>
-                  <div className="row" style={{marginRight: "10%", marginTop: "5%"}}>
-                    <p style={{fontSize: "30px", fontWeight: "bold", color: "#FFFFFF", textAlign: "center"}}>
-                      Hirebeat helps bridges the gap to a job by <br/>
-                      making sure you‘re prepared for the interview
-                    </p>
+                  <div className="col" style={{marginTop: "10%"}}>
+                    <div style={{marginLeft: "70%", marginTop: "5%"}}>
+                      <img src={people} alt="people image"/>
+                    </div>
+                    <div style={{marginRight: "80%", marginTop: "5%", width: "100%"}}>
+                      <p style={{fontSize: "30px", fontWeight: "bold", color: "#FFFFFF", textAlign: "center"}}>
+                        Hirebeat helps bridges the gap to a job by <br/>
+                        making sure you‘re prepared for the interview
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -285,12 +287,12 @@ export class Home extends Component {
                 <p style={{fontSize: "30px", fontWeight: "bold", textAlign: "center", color: "#4356F0"}}>
                   Prepare your next interview as simple as 1-2-3
                 </p>
-                <div className="row">
+                <div className="row" style= {{marginRight: "0px"}}>
                   <div className="col">
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <img src={step1} alt="step1 image"/>
                     </div>
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <p style={{fontSize: "20px", fontWeight: "normal", textAlign:"center", color: "#000000"}}>
                         Choose Interview <br/>
                         & Practice
@@ -298,10 +300,10 @@ export class Home extends Component {
                     </div>
                   </div>
                   <div className="col">
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <img src={step2} alt="step2 image"/>
                     </div>
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <p style={{fontSize: "20px", fontWeight: "normal", textAlign:"center", color: "#000000"}}>
                         AI & Expert <br/>
                         Analysis
@@ -309,10 +311,10 @@ export class Home extends Component {
                     </div>
                   </div>
                   <div className="col">
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <img src={step3} alt="step3 image"/>
                     </div>
-                    <div className="row" style={{justifyContent: "center"}}>
+                    <div style={{justifyContent: "center", display: "flex"}}>
                       <p style={{fontSize: "20px", fontWeight: "normal", textAlign:"center", color: "#000000"}}>
                         Review & <br/>
                         Pivot
@@ -321,9 +323,11 @@ export class Home extends Component {
                   </div>
                 </div>
               </div>
-              <h2 style={{fontSize: "40px", fontWeight: "bold", textAlign: "center", color: "#000000", marginTop: "3%"}}>
-                Your seat is vacant
-              </h2>
+              <div>
+                <h2 style={{fontSize: "40px", fontWeight: "bold", textAlign: "center", color: "#000000", marginTop: "3%"}}>
+                  Your seat is vacant
+                </h2>
+              </div>
               <div className="d-flex justify-content-center">
                 <HomeButton
                   style={{marginRight: 0,}}
@@ -348,7 +352,7 @@ export class Home extends Component {
                   </Link>
                 </div>
                 <div className="col footer-align">
-                  <button style={{outline: "none", border: "none", marginRight: "20px", borderRadius: "10px"}}>
+                  <button style={{outline: "none", border: "none", marginRight: "20px", borderRadius: "10px", marginLeft: "70%"}}>
                     <img style={{height:"38px", width: "38px"}} src={fbIcon} alt="facebook icon"/>
                   </button>
                   <button style={{outline: "none", border: "none", marginRight: "20px", borderRadius: "10px"}}>
