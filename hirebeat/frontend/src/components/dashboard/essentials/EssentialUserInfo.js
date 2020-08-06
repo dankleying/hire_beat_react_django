@@ -213,7 +213,7 @@ export class EssentialUserInfo extends Component {
                 {
                   this.props.profile.membership == "Regular" &&
                   <div className="row" style={{float: "right"}}>
-                    <div className="col" style={{display: "flex", alignItems: "center"}}>
+                    <div className="col" style={{display: "flex", alignItems: "center", marginRight: "10px"}}>
                       <IconText
                         iconName={"card_membership"}
                         iconMargin={"6px"}
@@ -222,7 +222,6 @@ export class EssentialUserInfo extends Component {
                         fontFamily={"Lato"}
                       />
                     </div>
-<<<<<<< HEAD
                     <div className="col upgrade">
                       <Link className="text-15" style={{color: "#ffffff", textDecoration: "none", lineHeight: "34px"}} to="/pricing">Upgrade</Link>
                     </div>
