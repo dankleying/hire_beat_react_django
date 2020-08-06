@@ -218,9 +218,11 @@ export class EssentialUserInfo extends Component {
                         iconName={"card_membership"}
                         iconMargin={"6px"}
                         textDisplayed={this.props.profile.membership}
-                        textSize={"15px"}
+                        textSize={"18px"}
+                        fontFamily={"Lato"}
                       />
                     </div>
+<<<<<<< HEAD
                     <div className="col upgrade">
                       <Link className="text-15" style={{color: "#ffffff", textDecoration: "none", lineHeight: "34px"}} to="/pricing">Upgrade</Link>
                     </div>
@@ -270,7 +272,6 @@ export class EssentialUserInfo extends Component {
                     </div>
                   </div>
                   {this.props.profile.membership == "Premium" &&
-
                     <input
                       className="form-control"
                       type="text"

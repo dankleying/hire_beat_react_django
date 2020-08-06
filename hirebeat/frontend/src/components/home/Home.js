@@ -93,7 +93,7 @@ export class Home extends Component {
                       Land your next job, <br/>
                       starting with the interview
                     </p>
-                    <p style={{fontSize: "20px", fontWeight: "normal", color: "#FFFFFF", textAlign: "center"}}>
+                    <p style={{fontSize: "20px", fontWeight: "normal", color: "#FFFFFF"}}>
                       AI-analysis interview platform that supercharges your performance <br/>
                       and makes a great impression at your next interview.
                     </p>
@@ -322,7 +322,6 @@ export class Home extends Component {
               </div>
               <div className="d-flex justify-content-center">
                 <HomeButton
-                  style={{marginRight: 0,}}
                   first={true}
                   onTap={() => this.redirectTo("/register/")}
                   textDisplayed={"Sign Up Now"}
