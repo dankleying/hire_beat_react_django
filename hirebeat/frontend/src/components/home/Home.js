@@ -2,14 +2,6 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { Redirect, withRouter, Link } from "react-router-dom";
 import ScrollAnimation from "react-animate-on-scroll";
-import pc from "./../../assets/pc.png";
-import easyToUse from "./../../assets/easytouse.png";
-import realtime from "./../../assets/realtime.png";
-import questionBank from "./../../assets/questionbank.png";
-import review from "./../../assets/review.png";
-import afford from "./../../assets/affordable.png";
-import feedback from "./../../assets/feedback.png";
-import laptop from "./../../assets/laptop.png";
 import people from "./../../assets/people.png";
 import step1 from "./../../assets/step1.png";
 import step2 from "./../../assets/step2.png";
@@ -124,7 +116,7 @@ export class Home extends Component {
                   </div>
                 </div>
                 <div className="col" style={{marginLeft: "10%", marginTop: "15%"}}>
-                  <img src={pc} alt="pc"/>
+                  <img src={"https://hirebeat-assets.s3.amazonaws.com/Home-page/Group.png"} style={{width: "516px", height: "493.16px"}} alt="pc"/>
                 </div>
               </div>
            </div>
@@ -150,7 +142,7 @@ export class Home extends Component {
                 <div className="row" style={{marginTop: "7rem", marginRight: "0px"}}>
                   <div className="col">
                     <div style={{justifyContent: "center", display: "flex"}}>
-                      <img src={easyToUse} alt="easy to use icon"/>
+                      <img src={"https://hirebeat-assets.s3.amazonaws.com/Home-page/easytouse.png"} style={{width: "91px", height: "91px"}} alt="easy to use icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
                       <h3 style={{fontSize: "30px", fontWeight: "bold", textAlign: "center", color: "#000000"}}>
@@ -165,7 +157,7 @@ export class Home extends Component {
                   </div>
                   <div className="col">
                     <div style={{justifyContent: "center", display: "flex"}}>
-                      <img src={realtime} alt="realtime icon"/>
+                      <img src={"https://hirebeat-assets.s3.amazonaws.com/Home-page/realtime.png"} style={{width: "91px", height: "91px"}} alt="realtime icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
                       <h3 style={{fontSize: "30px", fontWeight: "bold", textAlign: "center", color: "#000000"}}>
@@ -179,7 +171,7 @@ export class Home extends Component {
                   </div>
                   <div className="col">
                     <div style={{justifyContent: "center", display: "flex"}}>
-                      <img src={questionBank} alt="question bank icon"/>
+                      <img src={"https://hirebeat-assets.s3.amazonaws.com/Home-page/questionbank.png"} style={{width: "91px", height: "91px"}} alt="question bank icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
                       <h3 style={{fontSize: "30px", fontWeight: "bold", textAlign: "center", color: "#000000"}}>
@@ -196,7 +188,7 @@ export class Home extends Component {
                 <div className="row" style={{marginTop:"1rem", marginRight: "0px"}}>
                   <div className="col">
                     <div style={{justifyContent: "center", display: "flex"}}>
-                      <img src={review} alt="review icon"/>
+                      <img src={"https://hirebeat-assets.s3.amazonaws.com/Home-page/review.png"} style={{width: "91px", height: "91px"}} alt="review icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
                       <h3 style={{fontSize: "30px", fontWeight: "bold", textAlign: "center", color: "#000000"}}>
@@ -210,7 +202,7 @@ export class Home extends Component {
                   </div>
                   <div className="col">
                     <div style={{justifyContent: "center", display: "flex"}}>
-                      <img src={afford} alt="affordable icon"/>
+                      <img src={"https://hirebeat-assets.s3.amazonaws.com/Home-page/afford.png"} style={{width: "91px", height: "91px"}} alt="affordable icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
                       <h3 style={{fontSize: "30px", fontWeight: "bold", textAlign: "center", color: "#000000"}}>
@@ -224,7 +216,7 @@ export class Home extends Component {
                   </div>
                   <div className="col">
                     <div style={{justifyContent: "center", display: "flex"}}>
-                      <img src={feedback} alt="feedback icon"/>
+                      <img src={"https://hirebeat-assets.s3.amazonaws.com/Home-page/feedback.png"} style={{width: "91px", height: "91px"}} alt="feedback icon"/>
                     </div>
                     <div style={{justifyContent: "center", marginTop: "10px"}}>
                       <h3 style={{fontSize: "30px", fontWeight: "bold", textAlign: "center", color: "#000000"}}>
@@ -259,7 +251,7 @@ export class Home extends Component {
               <div className="home-3">
                 <div className="row" style={{marginRight: "0px"}}>
                   <div className="col-4" style={{marginLeft: "5%", marginTop: "10%"}}>
-                    <img src={laptop} alt="laptop image"/>
+                    <img src={"https://hirebeat-assets.s3.amazonaws.com/Home-page/Group+69.png"} style={{width: "698.48px", height: "495.3px"}} alt="laptop image"/>
                   </div>
                   <div className="col" style={{marginTop: "10%"}}>
                     <div style={{marginLeft: "70%", marginTop: "5%"}}>
