@@ -2,8 +2,21 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import {HomeButton} from "./../home/Home";
+import emailjs from 'emailjs-com'
 
 export default function Company() {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'hire_beat', e.target, 'user_M93PeAsVxs6GUPZp7NGXc')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    e.target.reset()
+  }
+
   return (
     <div
       className="container-fluid"
@@ -154,22 +167,25 @@ export default function Company() {
               <div className="col contact-bg">
                 <div style={{width: "80%", margin: "auto"}}>
                   <br/>
-                  <label className="contact-form-font">
-                  Email(Optional)
-                  </label>
-                  <br/>
-                  <input className="contact-form" type="email"></input>
-                  <br/>
-                  <br/>
-                  <label className="contact-form-font">
-                    Message
-                  </label>
-                  <br/>
-                  <textarea className="contact-form" style={{height: "6rem"}}></textarea>
-                  <br/>
-                  <button className="contact-form-btn" style={{outline: "none"}}>
-                    submit
-                  </button>
+                  <form style={{width: "80%", margin: "auto"}} onSubmit={sendEmail}>
+                    <br/>
+                    <label className="contact-form-font">
+                    Email(Optional)
+                    </label>
+                    <br/>
+                    <input className="contact-form" type="email" name="email"></input>
+                    <br/>
+                    <br/>
+                    <label className="contact-form-font">
+                      Message
+                    </label>
+                    <br/>
+                    <textarea className="contact-form" style={{height: "6rem"}} name="message"></textarea>
+                    <br/>
+                    <button className="contact-form-btn" style={{outline: "none"}}>
+                      submit
+                    </button>
+                  </form>
                 </div>
               </div>
               <div className="col">
