@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import DocumentMeta from 'react-document-meta';
+import {Helmet} from "react-helmet";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import Dashboard from "./dashboard/Dashboard";
@@ -23,9 +24,11 @@ import blogdetail2 from "./blog/blog-details2";
 import blogdetail3 from "./blog/blog-details3";
 import blogdetail4 from "./blog/blog-details4";
 import blogdetail5 from "./blog/blog-details5";
+import blogdetail6 from "./blog/blog-details6";
 import SelectParam from "./practice/SelectParam";
 import SelectSimulate from "./practice/SelectSimulate";
 import TechFields from "./practice/TechFields";
+import TechPracticeMode from "./practice/TechPracticeMode";
 import BehaviorQuestionMode from "./practice/BehaviorQuestionMode"
 import NotFoundPage from "./layout/NotFoundPage";
 import Privacy from "./layout/Privacy";
@@ -82,6 +85,11 @@ class App extends Component {
     };
     return (
       <DocumentMeta {...meta}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>HireBeat – the best video interview prep tool for jobseekers</title>
+        <link rel="canonical" href="https://hirebeat.co"/>
+      </Helmet>
       <React.Fragment>
       <Provider store={store}>
         <AlertProvider template={AlertTemplate} {...alertOptions}>
@@ -112,6 +120,11 @@ class App extends Component {
                   path="/techfields/"
                   component={TechFields}
                 />
+                <PrivateRoute
+                  exact
+                  path="/techfields/practice"
+                  component={TechPracticeMode}
+                />
                 <Route
                   exact
                   path="/practice/"
@@ -126,6 +139,7 @@ class App extends Component {
                 <Route exact path="/blog-details3" component={blogdetail3} />
                 <Route exact path="/blog-details4" component={blogdetail4} />
                 <Route exact path="/blog-details5" component={blogdetail5} />
+                <Route exact path="/blog-details6" component={blogdetail6} />
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/upload" component={MyVideoUploader} />
