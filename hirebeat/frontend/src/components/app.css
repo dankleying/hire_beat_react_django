@@ -1608,3 +1608,30 @@ color: #080A3C;
   font-size: 0.75rem;
   color: #4A6F8A;
 }
+
+.resume-result-detail-text1{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  color: #090D3A;
+}
+
+.resume-result-detail-text2{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 67px;
+  color: #090D3A;
+}
+
+.resume-result-detail-text3{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 37px;
+  color: #090D3A;
+}

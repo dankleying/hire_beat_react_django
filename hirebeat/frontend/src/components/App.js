@@ -46,7 +46,7 @@ import ReviewWindow from "./review/ReviewWindow";
 import GoTop from './shared/GoTop';
 
 import QuestionTypeChoices from "./practice/QuestionTypeChoices";
-
+import ResumeUpload from "./resume/resumeUpload";
 import "./app.css";
 import "./public/css/style.css";
 import "./public/css/responsive.css";
@@ -125,6 +125,10 @@ class App extends Component {
                   path="/techfields/practice"
                   component={TechPracticeMode}
                 />
+                <PrivateRoute 
+                  exact 
+                  path="/resume" 
+                  component={ResumeUpload} />
                 <Route
                   exact
                   path="/practice/"
