@@ -45,7 +45,7 @@
     "avatar": "^0.1.0",
     "aws-s3": "^2.0.5",
     "aws-sdk": "^2.663.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "bootstrap": "^4.5.2",
     "bootswatch": "^4.5.0",
