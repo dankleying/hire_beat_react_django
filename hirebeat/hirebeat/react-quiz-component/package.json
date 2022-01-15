@@ -33,7 +33,7 @@
   "bundleDependencies": false,
   "dependencies": {
     "dompurify": "^2.0.8",
-    "marked": "^0.7.0"
+    "marked": "^4.0.10"
   },
   "deprecated": false,
   "description": "React Quiz Component",
